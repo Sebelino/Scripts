@@ -1,4 +1,5 @@
 #!/bin/bash
 
-python2 ./daemons/skype_status.py &
+SCRIPTPATH=$( cd $(dirname $0) ; pwd -P )
+python2 "$SCRIPTPATH/daemons/skype_status.py" &
 
