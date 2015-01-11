@@ -2,10 +2,6 @@
 
 # Execute this script after plugging in the ASUS USB-ethernet adapter.
 
-# Enable kernel module. The interface should now appear in ifconfig.
-echo "Loading asix kernel module..."
-sudo modprobe asix
-
 # Get the name of the interface.
 IFNAME=`iwconfig 2>&1 | grep enp | awk '{print $1;}' | sed 's/://'`
 echo "Interface name is: $IFNAME"
