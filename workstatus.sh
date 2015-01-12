@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# You need a subdirectory "data" in this directory, where you put a file called
+# "workstatus.csv". Fill it with comma-separated data. Example:
+#
+# 30,,,,
+# 0,15,#FFFF00,DENY DESTRUCTIVE CONSTRUCTIVE,xrandr --output eDP1 --gamma 1:1:1; xrandr --output HDMI1 --gamma 1:1:1
+# 15,30,#FF0000,,xrandr --output eDP1 --gamma 0.5:0.5:2.0; xrandr --output HDMI1 --gamma 0.5:0.5:2.0
+
+
+# Current hour and minute
 TIME=$(date '+%-H %-M')
 HOUR=$(echo $TIME | cut -d' ' -f 1)
 MINU=$(echo $TIME | cut -d' ' -f 2)
